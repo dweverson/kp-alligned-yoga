@@ -1,7 +1,7 @@
 export default function Yoga() {
   return (
     <main>
-      <div>
+      <div className="content">
         <p>YOGA PAGE</p>
       </div>
     </main>
