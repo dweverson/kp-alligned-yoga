@@ -6,12 +6,6 @@
   --white: #ffffff;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
   background: var(--beige);
   margin: 0;
@@ -22,99 +16,23 @@ body {
   height: 100vh;
   background-color: var(--beige);
   display: grid;
-  place-items: center top;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
 }
+.text {
+  grid-column-start: 1;
+}
+
+
 
 footer {
   background: var(--brown);
-}
-
-/* 
-header {
-  background-color: white;
-  text-align: center;
-  position: fixed;
-  z-index: 999;
-  width: 100%;
-}
-
-.logo {
-  color: var(--brown)
-}
-nav {
-  background-color: white;
-  position: absolute;
-  text-align: left;
-  top: 100%;
+  position: fixed; 
   left: 0;
+  bottom: 0;
   width: 100%;
-  display: none;
 
 }
-
-nav ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-nav li {
-  margin-bottom: 1em;
-  margin-left: 1em;
-
-}
-
-nav a {
-  color: var(--grey);
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-.nav-toggle{
-  display: none;
-
-}
-
-.nav-toggle-label {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  margin-left: 1em;
-  height: 100%;
-  display: flex; 
-  align-items: center;
-
-}
-
-.nav-toggle-label span,
-.nav-toggle-label::before,
-.nav-toggle-label::after {
-  display: block;
-  background: var(--grey);
-  height: 2px;
-  width: 2em;
-  border-radius: 2px;
-  position: relative;
-}
-
-.nav-toggle-label::before,
-.nav-toggle-label::after {
-  content: '';
-  position: absolute;
-}
-
-.nav-toggle-label::before {
-  bottom: 7px;
-}
-
-.nav-toggle-label::after {
-  top: 7px;
-}
-
-.nav-toggle:checked ~ nav {
-  display: block; 
-} */
 
 header {
   background: var(--white);
@@ -214,6 +132,13 @@ nav a:hover {
   transition: opacity 250ms ease-in-out 250ms;
 }
 
+.logo {
+  color: var(--brown);
+  grid-column: 2 / 3;
+  font-family:  'Lovers Quarrel', cursive;
+
+}
+
 @media screen and (min-width: 800px) {
   .nav-toggle-label {
     display: none;
@@ -222,11 +147,6 @@ nav a:hover {
   header {
     display: grid;
     grid-template-columns: 1fr auto minmax(600px, 3fr) 1fr;
-  }
-
-  .logo {
-    color: var(--brown);
-    grid-column: 2 / 3;
   }
 
   nav {
@@ -242,6 +162,7 @@ nav a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    font-family: 'Cinzel', serif;
   }
 
   nav ul {

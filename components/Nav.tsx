@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Nav() {
   return (
     <header>
-      <h1 className="logo">KP Alligned Yoga</h1>
+      <Link href='/'><h1 className="logo">KP Alligned Yoga</h1></Link>
         <input type="checkbox" id="nav-toggle" className="nav-toggle"></input>
       <nav>
         <ul>
