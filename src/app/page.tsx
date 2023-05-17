@@ -1,21 +1,39 @@
-import Image from 'next/image'
-import styles from './page.module.css'
+import Image from "next/image";
+import styles from "./page.module.css";
+import { Cinzel, Open_Sans } from "@next/font/google";
+
+export const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+export const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+
 
 export default function Home() {
   return (
     <main>
-      <div className="content">
-        <p className='text'>
-         KP ALLIGNED YOGA 
-         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-        <Image 
-       
-        src="/images/plant.png" 
-        alt='plant picture'
-        width={300}
-        height={400}/>
+      <div className="content-container">
+        <div className="text">
+          <h2 className={`${styles.heading2} ${cinzel.className} ` }   >Yoga Teacher</h2>
+          <h1 className={`${styles.heading1} ${cinzel.className} ` } >Welcome to KP Alligned Yoga</h1>
+          <p className={`${styles.textmain} ${openSans.className}` }>
+            Hi, I'm Kerry! I'm a 200 hours certified yoga teacher with a passion
+            to help students find balance in their practice and their daily
+            lives. <br /><strong>Connect with me @kpalignedyoga</strong>
+          </p>
+        </div>
+        <Image
+          src="/images/plant.png"
+          alt="plant picture"
+          width={300}
+          height={400}
+        />
       </div>
     </main>
-  )
+  );
 }

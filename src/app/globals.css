@@ -10,14 +10,15 @@ body {
   background: var(--beige);
   margin: 0;
 }
-.content {
+.content-container {
   color: var(--brown);
   padding-top: 100px;
   height: 100vh;
   background-color: var(--beige);
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 50%;
+  grid-template-rows: auto;
+
 }
 .text {
   grid-column-start: 1;
@@ -135,8 +136,7 @@ nav a:hover {
 .logo {
   color: var(--brown);
   grid-column: 2 / 3;
-  font-family:  'Lovers Quarrel', cursive;
-
+  font-style: italic;
 }
 
 @media screen and (min-width: 800px) {
@@ -162,7 +162,6 @@ nav a:hover {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    font-family: 'Cinzel', serif;
   }
 
   nav ul {
