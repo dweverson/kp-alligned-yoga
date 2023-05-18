@@ -1,12 +1,29 @@
 .heading2 {
   color: var(--brown);
+  margin: 0px 70px 0px 50px;
+  text-align: left;
+
 }
 
 .heading1 {
   color: var(--green);
+  margin: -7px 70px 00px 50px;
+  text-align: left;
+
 }
 
 .textmain {
   color: var(--brown);
   font-style: italic;
+  text-align: left;
+  margin: 20px 70px 0px 50px
 }
+
+.offer{
+  background-color: var(--grey);
+}
+
+.accordion{
+  background-color: var(--grey);
+}
+
