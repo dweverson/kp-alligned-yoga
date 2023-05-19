@@ -1,0 +1,25 @@
+.accordion {
+  max-width: 600px;
+  background-color: var(--grey);
+}
+
+.accordion__title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  cursor: pointer;
+  background-color: var(--grey);
+}
+
+.accordion__title:hover {
+  background-color: var(--green);
+}
+
+.accordion__title,
+.accordion-content {
+  padding: 1rem;
+}
+
+.accordion-content {
+  background-color: var(--grey);
+}
